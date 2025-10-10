@@ -46,7 +46,7 @@ if reta1 < reta2 + reta3 and reta2 < reta1 + reta3 and reta3 < reta1 + reta2:
     print("É possível essas 3 retas formarem um triângulo")
     if reta1 == reta2 == reta3:
         print("Triângulo EQUILÁTERO")
-    elif reta1 != reta2 == True and0 reta1 != reta3 == True and reta2 != reta3 == True:
+    elif reta1 != reta2 == True and reta1 != reta3 == True and reta2 != reta3 == True:
         print("Triângulo ESCALENO")
     else:
         print("Triângulo ISÓSCELES")
