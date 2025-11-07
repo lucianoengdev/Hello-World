@@ -1,0 +1,20 @@
+Reading files in PYTHON
+
+
+file = open("name.extension", for what you will use ("r", "w", "a" ...) -> if in diferente directory you have ot put the file directory like "/c:/users/directory/name.extension", *Se eu colocar o nome de um arquivo que não existe ele vai criar um novo arquivo
+
+file.readable() = expressão booleana para saber se consegue ler ou não
+file.write() = Escreve dentro de "" o que você quer adicionar no final do arquivo
+
+
+Modules and PIP
+import MODULES -> Vai importar todas as "funções" de outro arquivo
+Modules of python I can use -> https://docs.python.org/3/py-modindex.html
+I can use diferente Modules that aren't pre installed using "pip install ..."
+I can uninstall Modules of my computer using "pip uninstall ..."
+
+
+Classes and Object
+Datatype -> Define kind of classes as a datatype
+class Student:
+	def __init__(self, .......define variaveis que definem ele.......)
