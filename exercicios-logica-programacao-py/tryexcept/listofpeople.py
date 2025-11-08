@@ -38,18 +38,20 @@ while True:
         conn.close
         if not todas_pessoas:
             print("Nenhuma pessoa na lista")
-            print("--------------------------")
             
         else:
             print("---Lista de pessoas cadastradas: ---")
             for pessoa in todas_pessoas:
                 print(f"Nome: {pessoa[0]}   Idade: {pessoa[1]}")
-                print("--------------------------")
+        
+        print("--------------------------")
     
     elif(opcao == 2):
         while True:
             try:
                 n = str(input("Nome: "))
+                if not n.replace(' ', '').isalpha() or not n.strip():
+                    raise ValueError("O nome deve conter apenas letras e não pode estar vazio.")
                 i = int(input("Idade: "))
                 break
             except Exception as erro:
@@ -57,8 +59,11 @@ while True:
 
         conn = sqlite3.connect(dtbase)
         cursor = conn.cursor()
-        cursor.execute("INSERT into pessoas, ")
+        cursor.execute("INSERT into pessoas (nome, idade) VALUES (?, ?)", (n, i))
+        conn.commit()
+        print("--Pessoa adicionada com sucesso--")
         print("--------------------------")
+        conn.close()
     
     else:
         print("Você saiu do programa")
